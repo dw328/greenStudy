@@ -9,16 +9,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <title>test.jsp</title>
+  <title>adminLeft.jsp</title>
 </head>
 <body>
-<%@ include file ="/include/header.jsp" %>
-<%@ include file ="/include/nav.jsp" %>
 <p><br/></p>
 <div class="container">
-
+  <h4>관리자메뉴</h4>
+  <hr/>
+  <div><a href ="${ctp}/" target ="_top">홈으로</a></div>
+  <hr/>
+  <div>회원관리</div>
+  <div><a href ="memberList.ad" target ="adminRight">회원리스트</a></div>
+  <hr/>
+  <div>게시판관리</div>
+  <div><a href ="boardList.ad" target ="adminRight">게시판리스트</a></div>
+  <hr/>
 </div>
 <p><br/></p>
-<%@ include file ="/include/footer.jsp" %>
 </body>
 </html>

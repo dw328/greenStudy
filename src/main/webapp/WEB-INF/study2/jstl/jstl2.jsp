@@ -40,25 +40,36 @@
   	</c:forEach>
   	<br/>
   	3번: <br/>
-  	<c:forEach var = "kards" items = "${kcards}" varStatus ="st">
+  	<c:forEach var = "kards" items = "${kards}" varStatus ="st">
   		${st.count},${st.index},${st.first},${st.last},${st.current} :${kards} <br/>
   	</c:forEach>
   	<br/>
 		<hr/>
-		<h4>사용예재</h4>
+		<h4>사용예제</h4>
 		<h5>1. 구구단 5단을 출력하시오</h5>
-		<c:forEach var ="i" items="${i}">
-			${i} /
+		<c:forEach var = "i" begin="1" end ="10" >
+			${(i*5)} <br/>
 		</c:forEach>
 		<br/>
 		<h5>2. 구구단 3단~5단 출력하시오(2중 for문)</h5>
-		
-		
+		<c:forEach var ="i" begin ="3" end ="5">
+			<c:forEach var ="j" begin="1" end ="9">
+				${i*j} <br/>	
+			</c:forEach>
+			<hr/>
+		</c:forEach>
 		<br/>
 		<h5>3. 저장된 그림 5장 출력하시오(13.png~ 17.png)</h5>
-		<c:set var="im" value="14"/>
-  	<img src="${ctp}/images/${im}.png" width="200px"/><br/> 
-  	<img src="${ctp}/images/${im}.png" width="200px"/><br/> 
+		<c:set var="im1" value="13(2)"/>
+		<c:set var="im2" value="14(2)"/>
+		<c:set var="im3" value="15(2)"/>
+		<c:set var="im4" value="16(1)"/>
+		<c:set var="im5" value="17(1)"/>
+  	<img src="${ctp}/images/${im1}.png" width="200px"/><br/> 
+  	<img src="${ctp}/images/${im2}.png" width="200px"/><br/> 
+  	<img src="${ctp}/images/${im3}.png" width="200px"/><br/> 
+  	<img src="${ctp}/images/${im4}.png" width="200px"/><br/> 
+  	<img src="${ctp}/images/${im5}.png" width="200px"/><br/> 
   	<hr/>
   	<h4>vos값 출력</h4>
   	<c:forEach var ="vo" items ="${vos}">

@@ -26,7 +26,8 @@
 	  <input type ="text" value ="가게4" name ="foodshop4" id ="foodshop4" class="form-control"/>
 	  <input type ="text" value ="가게5" name ="foodshop5" id ="foodshop5" class="form-control"/>
 	  <input type ="submit" class ="btn btn-success"/>
-	</div>  
+	</div>
+ 
 	<hr/>
   </form>
 </div>

@@ -18,10 +18,11 @@ public class Jstl2 extends HttpServlet{
 			String[] kcards ={"국민카드","BC카드","Lg카드","삼성카드","농협","비자"};
 			request.setAttribute("kards", kcards);
 			
-			int[] i = {1,2,3,4,5,6,7,8,9,10};
-			request.setAttribute("i", i);
-			int[] j = {1,2,3,4,5,6,7,8,9,10};
-			request.setAttribute("i", i);
+			int j =0;
+			for(int i=1; i<10; i++) {
+				j += i * 5;
+			}
+			request.setAttribute("j", j);
 			
 			//vos 자료 담기
 			List<String> vos = new ArrayList<>();

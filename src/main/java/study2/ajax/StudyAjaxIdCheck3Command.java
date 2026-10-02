@@ -1,0 +1,34 @@
+package study2.ajax;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import study2.StudyDAO;
+import study2.StudyInterface;
+import study2.dbtest.DbtestVO;
+
+public class StudyAjaxIdCheck3Command implements StudyInterface {
+
+	@Override
+	public void excute(HttpServletRequest request, HttpServletResponse reponse) throws ServletException, IOException {
+String mid = request.getParameter("mid") == null ? " " :  request.getParameter("mid");
+		
+		StudyDAO dao = new StudyDAO();
+		
+		DbtestVO vo = dao.getIdSearch(mid);
+		System.out.println("vo: " + vo);
+		// request.setAttribute("name", vo.getName());
+		
+		String name = vo.getName();
+		
+		if(name.equals("")) {
+			name = "찾는 자료가 없습니다.";
+		} else {
+			reponse.getWriter().write(name);
+		}
+
+	}
+
+}
