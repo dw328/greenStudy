@@ -172,7 +172,7 @@ public class BoardDAO {
 	public int setBoardUpdateOk(boardVO vo) {
 		int res = 0;
 		try {
-			sql ="update board set tittle =?, content=?, hostIp=?, openSw=? where idx =?";
+			sql ="update board set title =?, content=?, hostIp=?, openSw=? where idx =?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, vo.getTitle());
 			pstmt.setString(2, vo.getContent());
